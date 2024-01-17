@@ -3,8 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LeadsListingComponent } from './leads-listing/leads-listing.component';
 import { LeadsGridComponent } from './leads-listing/leads-grid/leads-grid.component';
 import { LeadsToolsComponent } from './leads-listing/leads-tools/leads-tools.component';
-import { DownloadPdfComponent } from './leads-listing/download-pdf/download-pdf.component';
-import { DownloadExcelComponent } from './leads-tools/download-excel/download-excel.component';
+import { DownloadPdfComponent } from './leads-listing/leads-tools/download-pdf/download-pdf.component';
 
 
 
@@ -13,8 +12,7 @@ import { DownloadExcelComponent } from './leads-tools/download-excel/download-ex
     LeadsListingComponent,
     LeadsGridComponent,
     LeadsToolsComponent,
-    DownloadPdfComponent,
-    DownloadExcelComponent
+    DownloadPdfComponent
   ],
   imports: [
     CommonModule
