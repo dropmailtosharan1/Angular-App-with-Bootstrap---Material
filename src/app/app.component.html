@@ -1,2 +1,65 @@
-<h1 class="bg-primary">Welcome to {{title}} Framework in Angular</h1> 
+<h1 class="bg-primary">Welcome to {{title}} Framework in Angular</h1>
 
+<div *ngIf="success_msg; then updated_msg; else error_msg"></div>
+
+<ng-template #error_msg> User was not added</ng-template>
+<ng-template #updated_msg> User was Updated</ng-template>
+
+<h2>Learning ngFor Directive</h2>
+<ul>
+  <li *ngFor="let contact of contacts; index as i; first as first; last as last">
+    <div class="bg-success" *ngIf="first"> This is first record </div>
+    <div>
+      {{i}}
+      {{contact.firstName}}
+      {{contact.lastName}} -
+      {{contact.contactId}}
+    </div>
+    <div class="bg-warning" *ngIf="last"> This is last record </div>
+  </li>
+</ul>
+
+<hr>
+<h4>New table with Even & Odd</h4>
+<ul>
+  <li *ngFor="let contact of contacts; even as even; odd as odd">
+    <div *ngIf="even" class="bg-success">
+      {{contact.firstName}}
+      {{contact.lastName}} -
+      {{contact.contactId}}
+    </div>
+    <div *ngIf="odd" class="bg-warning">
+      {{contact.firstName}}
+      {{contact.lastName}} -
+      {{contact.contactId}}
+    </div>
+  </li>
+</ul>
+<hr>
+<h4>Learning ngSwitch</h4>
+
+<div [ngSwitch]="superPower">
+  <div *ngSwitchCase="'wonderWoman'">Display wonderWoman has super powers</div>
+  <div *ngSwitchCase="'superMan'">Display superMan has super powers</div>
+  <div *ngSwitchCase="'heMan'">Display haMan has super powers</div>
+  <div *ngSwitchCase="'spiderMan'">Display spiderMan has super powers</div>
+  <div *ngSwitchDefault>Super power is Learning Angular</div>
+</div>
+
+<div [ngSwitch]="category">
+  <div *ngSwitchCase="'clothing'">Display Clothing Industries</div>
+  <div *ngSwitchCase="'mobiles'">Display Mobile Industries</div>
+  <div *ngSwitchDefault>No category to display</div>
+</div>
+
+<div [ngSwitch]="tax">
+  <div *ngSwitchCase="10">Display tax is 10</div>
+  <div *ngSwitchCase="30">Display tax is 30</div>
+  <div *ngSwitchDefault>Default tax is 50%</div>
+</div>
+<hr>
+<h4>Learning ngStyle</h4>
+<div [ngStyle]="{'background-color':'green', 'color':'#fff'}">This is Green div</div>
+
+<div [ngStyle]="{'background-color': styleProp}">This is a dynamic div</div>
+<div [ngStyle]="{'color': txtColor === 'blue' ? 'blue': 'green'}">This is Conditional div</div>

@@ -52,6 +52,17 @@ If you don't give the save it goes to global reference we use save it comes to t
 
 ng add @angular/material
 
+## NPM package manager 
+
+    -> npm i bootstrap jquery popper --save -> Bootstrap v4 
+    -> Bootstrap 5 
+    npm i bootstrap popper --save 
+    package.json 
+
+    DO NOT MISS THIS STEP 
+        update angular.json 
+        RESTART your application
+
 ## Angular CLI - Command Line Interface 
 
     - schematics -> angular.json / package.json 
@@ -401,3 +412,147 @@ p2
 
     services - 
         is a common reusable piece of functionality shared between different components  
+## Templates in Angular components 
+
+1. whenever we generate a component 
+    - 4 files 
+        - template file ( .html )
+        - style.css ( stylesheet)
+        - class (component.ts file )
+        - spec ( unit test file)
+
+2. This is totally based on the choice at installing Angular app 
+    - if you selected scss, it is ended with .scss
+    - if you selected css, it is ended with .css
+        style.css 
+
+3. <comp_name>.component.html 
+    - It works!
+
+4. <comp_name>.component.ts file 
+
+5. Decorator it gives definitinion and meaning to the 
+    @ - it has prefix of @
+
+6. by default Angular will add "app" as prefix 
+    - selector -> "app-leads-listing" 
+    - unique identifier to identify this component 
+    - <app-leads-listing> 
+
+        -> Can you change the default "app" prefix? 
+            -> YES - we can change it throughout the app 
+                -> "app" -> "arc-tutorials"
+                -> angular.json -> change prefix 
+        -> what will happen if i change? 
+            -? Nothing happenns. Only thing you change, make sure you update with latest info
+        -> will your app work or will it crash? 
+            -> If you have updated the necessary components with latest prefix 
+
+7. Templates in Components 
+
+    - Two ways of using templates in Components 
+        - templateUrl 
+            - link the html file 
+
+        - template 
+
+    - templateUrl 
+        -> is always 1 single html file 
+
+    - template 
+        -> we will pass the template itself instead of a html file 
+        -> we just the HTML code that we want the component to display 
+        -> we will use "backtick" and NOT single quote 
+            backtick key can be found on left top side ` [~ this key press with shift]
+8. stylesURL 
+    -> is an array 
+    -> it can take multple stylesheets as input 
+    -> it can be one or more stylesheets 
+
+9. Hands-on examples 
+    Profile -> Modules 
+        list-profile -> component 
+## Directives 
+
+1. Directive is a way to extend our HTML including both view as well as behaviour
+2. Directives are used to extend the power of HTML 
+3. Mainly 3 types of directives 
+
+    Component Directive 
+
+    Structural Directive 
+        ngIf
+        ngFor
+        ngSwitch
+
+    Attribute Directive 
+        ngClass
+        ngStyle 
+
+4. Examples 
+    AppComponent -> Componnt Directive 
+
+5. Custom Directives 
+
+    ng g directive highlight
+
+    - This is an advanced topic 
+    - We will revisit this topic again once we have our foundations better 
+
+## Structrual Directives 
+
+1. Structrual Directives will help us in extending, adding or removing elements from the HTML page 
+
+2. DOM Mainupulation 
+
+3. 3 types of Structrual Directives
+
+    ngIf
+    ngFor
+    ngSwitch 
+
+4. asterisk (*) means its a built in Structrual directive 
+
+E.g ngIf 
+    <div *ngIf="<condition>"> Value 1</div> 
+
+ ## ngIf 
+
+1. It will always have * astrisk symobl 
+2. Built in structural directive 
+3. The ngIf condition will evaluate the expression and result true or false 
+4. We can use OR (||), And ( &&) and we can also use NOT(!) operators inside ngIf
+5. We can have multiple use cases 
+
+    - ngIf -> done
+        -> logical opeartors 
+            OR (||)
+            AND (&&)
+            NOT (!)
+    - ngIf else -> 
+    - ngIf then e
+
+## ngStyle 
+
+1. ngStyle is a built in directive used to set style/css properties 
+
+2. [ngStyle] 
+
+3. Any/All css properties using ngStyle 
+
+4. more than 1 property on any DOM element 
+
+5. We can also pass dynamic values to ngStyle 
+
+6. ngStyle - hands-on examples 
+
+    6.1 basic use case of ngStyle - setting a value using ngStyle 
+    6.2 dynamic value from component 
+    6.3 ngStyle with conditional operators 
+
+7. Common mistakes 
+    - Not giving correct {} curly-braces 
+    - Not putting correct double/single qoutes where it is required 
+    - Spelling mistakes in defining the css properties 
+    - DO NOT put qoutes for the variables - it will become strings
+
