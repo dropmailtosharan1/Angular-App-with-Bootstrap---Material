@@ -1,5 +1,16 @@
 <h1 class="bg-primary">Welcome to {{title}} Framework in Angular</h1>
 
+<h4>ngClass </h4>
+<div [ngClass]="'c1'">This is ngClass example</div>
+
+<div [ngClass]="'c1 c2 c3 c4'">This is ngClass Multiple classes example</div>
+
+ <!-- <div [ngClass]="styleClsProp">This is ngClass using dynamic variable example</div> -->
+
+ <!-- <div [ngClass]="conditionClsProp === 'c4'? 'c4' : 'c5'">This is ngClass using conditional check example</div> -->
+
+ <div [ngClass]="{c4: true, c5: false}">This is ngClass using Object example</div>
+
 <div *ngIf="success_msg; then updated_msg; else error_msg"></div>
 
 <ng-template #error_msg> User was not added</ng-template>
@@ -63,3 +74,4 @@
 
 <div [ngStyle]="{'background-color': styleProp}">This is a dynamic div</div>
 <div [ngStyle]="{'color': txtColor === 'blue' ? 'blue': 'green'}">This is Conditional div</div>
+<hr>
