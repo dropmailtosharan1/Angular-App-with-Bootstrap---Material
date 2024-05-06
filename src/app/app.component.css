@@ -5,3 +5,9 @@
 .c2{
     color: blue;
 }
+
+.bg-success, .bg-warning{
+    width: fit-content;
+    margin: 10px;
+    padding: 5px;
+}
