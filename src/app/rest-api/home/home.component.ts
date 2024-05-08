@@ -31,4 +31,14 @@ export class HomeComponent {
     this.router.navigate( ['user', id] );
     console.log( 'User id: ', id );
   }
+
+  addUser(): void {
+    this.router.navigate( ['add'] );
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  deleteUser(user: any) {
+    this.users = this.users.filter( u => u !== user );
+    this.requestService.deleteUser(user).subscribe();
+  }
 }

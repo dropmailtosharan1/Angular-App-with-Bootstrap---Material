@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './rest-api/services/in-memory-data.service';
 import { UserDetailComponent } from './rest-api/user/user-detail.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserAddComponent } from './rest-api/user/user-add.component';
 
 @NgModule({
   declarations: [
@@ -22,14 +24,17 @@ import { UserDetailComponent } from './rest-api/user/user-detail.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    UserAddComponent
   ],
   imports: [
     BrowserModule, 
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation:false})
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation:false}),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()
