@@ -1,1 +1,12 @@
-<p>home works!</p>
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+<!-- eslint-disable @angular-eslint/template/alt-text -->
+<ul>
+    <li *ngFor="let user of users">
+        <img [src]="user.avatar">
+        <p>{{ user.first_name}} {{ user.last_name }}</p>
+        <div class="btn btn-outline-primary btn-sm" (click)="userDetails(user.id)">Details</div>
+    </li>
+ </ul>
+ 
+

@@ -585,3 +585,7 @@ hands-on examples:
 4. <div [ngClass]="conditionClsProp === 'c4'? 'c4' : 'c5'">This is ngClass using conditional check example</div>
 
 5. <div [ngClass]="{c4: true, c5: false}">This is ngClass using Object example</div>
+ ## For Reat API
+
+ <!-- install  -->
+ npm i angular-in-memory-web-api
