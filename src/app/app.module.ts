@@ -5,11 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HighlightDirective } from './directive/highlight.directive';
+import { NavbarComponent } from './rest-api/navbar/navbar.component';
+import { HomeComponent } from './rest-api/home/home.component';
+import { AboutComponent } from './rest-api/about/about.component';
+import { ContactComponent } from './rest-api/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HighlightDirective
+    HighlightDirective,
+    NavbarComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule, 
