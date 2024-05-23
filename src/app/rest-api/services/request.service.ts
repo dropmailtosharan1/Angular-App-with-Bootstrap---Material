@@ -48,6 +48,7 @@ export class RequestService {
     };
   }
 
+  // Add User
   addUser( user: User ): Observable<User> {
     return this.http.post<User>(this.url, user, this.httpOptions)
       .pipe(
@@ -55,6 +56,7 @@ export class RequestService {
       );
   }
 
+  //  Delete User
   deleteUser( user: User ): Observable<User> {
     const url = `${this.url}/${user.id}`;
 
@@ -63,5 +65,5 @@ export class RequestService {
         catchError(this.handleError<User>('deleteUser id=${user.id}'))
       );
   }
-  
+
 }

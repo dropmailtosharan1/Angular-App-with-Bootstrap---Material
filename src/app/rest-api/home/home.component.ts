@@ -11,16 +11,21 @@ import { Router } from '@angular/router';
 export class HomeComponent {
 
   users:User[] = [];
+  loading = false;
 
   constructor ( private requestService:RequestService, private router: Router) {
     this.getUsers();
    }
 
   getUsers(){
+    this.loading=true;
+
     this.requestService.getUsers().subscribe(
       (res: User[]) => {
         // console.log(res);
         this.users= res;
+
+        this.loading=false;
       }, (err)=>{
         console.log(err);
       }

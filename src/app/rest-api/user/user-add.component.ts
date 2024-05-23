@@ -34,7 +34,7 @@ export class UserAddComponent {
     if(this.userForm.invalid){
       return;
     }
-    const avatar = 'assets/user.jpg';
+    const avatar = 'assets/img/user.jpg';
     const first_name = this.f.first_name.value;
     const last_name = this.f.last_name.value;
 

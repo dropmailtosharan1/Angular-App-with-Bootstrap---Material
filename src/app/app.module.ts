@@ -15,6 +15,8 @@ import { InMemoryDataService } from './rest-api/services/in-memory-data.service'
 import { UserDetailComponent } from './rest-api/user/user-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserAddComponent } from './rest-api/user/user-add.component';
+import { LoadingComponent } from './rest-api/components/shared/loading/loading.component';
+import { NoimagePipe } from './rest-api/pipes/noimage.pipe';
 
 @NgModule({
   declarations: [
@@ -25,14 +27,16 @@ import { UserAddComponent } from './rest-api/user/user-add.component';
     AboutComponent,
     ContactComponent,
     UserDetailComponent,
-    UserAddComponent
+    UserAddComponent,
+    LoadingComponent,
+    NoimagePipe
   ],
   imports: [
     BrowserModule, 
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation:false}),
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation:false, delay: 1500}),
     FormsModule,
     ReactiveFormsModule
   ],

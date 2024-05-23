@@ -1,25 +1,38 @@
 <!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
 <!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
 <!-- eslint-disable @angular-eslint/template/alt-text -->
-<div class="btn-toolbar mt-2 ms-2" role="toolbar">
+
+<app-loading *ngIf="loading"></app-loading>
+
+<div class="container pt-5">
+  <div class="btn-toolbar mt-2 ms-2" role="toolbar">
     <div class="btn-group">
-        <button class="btn btn-success" (click)="addUser()">Add User</button>
+      <button class="btn btn-success" (click)="addUser()">Add User</button>
     </div>
-</div>
+  </div>
 
-<ul style="margin-top: 10px;">
+  <ul style="margin-top: 10px;">
     <li *ngFor="let user of users">
-        <img [src]="user.avatar">
-        <p>{{ user.first_name }} {{ user.last_name }}</p>
-        <div style="padding-top: 5px; width: 18rem;">
-            <button class="btn btn-outline-primary btn-sm"
-            (click)="userDetails(user.id)">
-                Details
-            </button>
-            <button class="btn btn-danger btn-sm" title="Delete user"
-(click)="deleteUser(users)">X</button>
-        </div>
+      <img [src]="user.avatar"/>
+      <!-- <img [src]="null | noimage"/> -->
+      <p>{{ user.first_name }} {{ user.last_name }}</p>
+      <div style="padding-top: 5px; width: 18rem">
+        <button
+          class="btn btn-outline-primary btn-sm"
+          (click)="userDetails(user.id)"
+        >
+          Details
+        </button>
+        <button
+          class="btn btn-danger btn-sm ms-2"
+          title="Delete user"
+          (click)="deleteUser(user)"
+        >
+          X
+        </button>
+      </div>
     </li>
-</ul>
- 
+  </ul>
 
+  <!-- <app-pager (pageSelected)="setPage($event)" [config]="config"></app-pager> -->
+</div>

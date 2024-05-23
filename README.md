@@ -589,3 +589,9 @@ hands-on examples:
 
  <!-- install  -->
  npm i angular-in-memory-web-api
+
+ => npm install --save-dev @fortawesome/fontawesome-free
+ update on angularjson file 
+              "./node_modules/@fortawesome/fontawesome-free/css/all.css"
+
+

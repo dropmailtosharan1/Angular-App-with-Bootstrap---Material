@@ -12,25 +12,25 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const users = [
       { id: 11, first_name: 'Eve', last_name: 'Holt',
-avatar: 'assets/user.jpg' },
+avatar: 'assets/img/user.jpg' },
       { id: 12, first_name: 'Charles', last_name: 'Morris',
-avatar: 'assets/user.jpg' },
+avatar: 'assets/img/user.jpg' },
       { id: 13, first_name: 'Tracy', last_name: 'Ramos',
-avatar: 'assets/user.jpg' },
+avatar: 'assets/img/user.jpg' },
       { id: 14, first_name: 'Eve', last_name: 'Holt',
-avatar: 'assets/user.jpg' },
+avatar: 'assets/img/user.jpg' },
       { id: 15, first_name: 'Charles', last_name: 'Morris',
-avatar: 'assets/user.jpg' },
+avatar: 'assets/img/user.jpg' },
       { id: 16, first_name: 'Tracy', last_name: 'Ramos',
-avatar: 'assets/user.jpg' },
+avatar: 'assets/img/user.jpg' },
       { id: 17, first_name: 'Eve', last_name: 'Holt',
-avatar: 'assets/user.jpg' },
+avatar: 'assets/img/user.jpg' },
       { id: 18, first_name: 'Charles', last_name: 'Morris',
-avatar: 'assets/user.jpg' },
+avatar: 'assets/img/user.jpg' },
       { id: 19, first_name: 'Tracy', last_name: 'Ramos',
-avatar: 'assets/user.jpg' },
+avatar: 'assets/img/user.jpg' },
       { id: 20, first_name: 'Eve', last_name: 'Holt',
-avatar: 'assets/user.jpg' }
+avatar: 'assets/img/user.jpg' }
     ];
     return {users};
   }
